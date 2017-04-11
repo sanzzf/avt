@@ -1,0 +1,100 @@
+﻿/**************************************************************************************************
+* 	Modular CSS - contains only modular classes
+**************************************************************************************************/
+.offScreen {
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.fullClear {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.alignCenter {
+    text-align: center;
+}
+.alignRight {
+    text-align: right;
+}
+.media {
+    overflow: hidden;
+}
+.fullWidth {
+    width: 100%;
+}
+.halfWidth {
+    width: 50%;
+}
+.oneFifthWidth {
+    width: 20%;
+}
+.fourFifthWidth {
+    width: 80%;
+}
+.twoThirdWidth {
+    width: 65.9574468085%;
+}
+.oneThirdWidth {
+    width: 34.0425531915%;
+}
+.oneQuarterWidth {
+    width: 25.5319148936%;
+}
+.threeQuarterWidth {
+    width: 74.4680851064%
+}
+.doubleLine {
+    line-height: 44px;
+}
+.tripleLine {
+    line-height: 66px;
+}
+.noMargin {
+    margin: 0;
+}
+.largeText {
+    font-size: 1.8em;
+    line-height: 22px;
+}
+.smallText {
+    font-size: 1.5em;
+}
+.leftGutter {
+    padding-left: 25px;
+}
+.rightGutter {
+    padding-right: 25px;
+}
+.topGap {
+    margin-top: 22px;
+}
+.bottomGap {
+    margin-bottom: 22px;
+}
+.halfBottomGap {
+    margin-bottom: 11px;
+}
+.doubleBottomGap {
+    margin-bottom: 44px;
+}
+.doubleTopGap {
+    margin-top: 44px;
+}

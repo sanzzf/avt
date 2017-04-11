@@ -1,0 +1,1364 @@
+﻿/**************************************************************************************************
+* 	Responsive CSS - contains all media queries and responsive styling
+**************************************************************************************************/
+@media only screen and (max-width: 1280px) {
+    .offsetForm {
+        margin: 0;
+    }
+    .offsetForm .textbox {
+        width: 290px;
+    }
+    #grantSearch .separatorLabel + a {
+        clear: both;
+    }
+}
+@media only screen and (min-width: 951px) and (max-width: 1280px) {
+    .additionalEventInfo {
+        display: none;
+    }
+}
+@media only screen and (min-width: 951px) and (max-width: 1250px) {
+    .journalCard .front .flipContent {
+        height: 66px;
+    }
+}
+@media only screen and (min-width: 751px) and (max-width: 1250px) {
+    #signUpEmail {
+        clear: both;
+    }
+    .signUpForm {
+        float: left;
+        padding: 0 0 0 25px;
+    }
+    .shareLinks span {
+        display: block;
+    }
+}
+@media only screen and (max-width: 1250px) {
+    .additionalFilter {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .homeCard .flipContent > .halfWidth {
+        border: 0;
+        width: 100%;
+    }
+    .homeCard .flipContent > .halfWidth.right {
+        display: none;
+    }
+    .fellowLogin .textbox {
+        width: 215px;
+    }
+}
+@media only screen and (min-width: 1151px) {
+    .homeFlipOverlay .sectionLink {
+        font-size: 1.8em;
+    }
+    .colList.rightSpacing {
+        margin-right: 187px;
+    }
+}
+@media only screen and (min-width: 971px) and (max-width: 1150px) {
+    .homeCard .flipContent h2 {
+        font-size: 2.8em;
+    }
+    .homeCard .flipContent p {
+        margin: 0 0 11px 0;
+    }
+}
+@media only screen and (min-width: 951px) and (max-width: 1150px) {
+    #siteSearch {
+        width: 250px;
+    }
+    .heroImageOverlay {
+        position: relative;
+        height: auto;
+    }
+    .heroImageOverlay .contentOverlay {
+        background: #333132;
+    }
+    #stickyPanel .btn {
+        float: left;
+        clear: both;
+        margin: 11px 0 0 0;
+    }
+}
+@media only screen and (min-width: 691px) and (max-width: 1150px) {
+    .spotlight .imageOverlay {
+        box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.17);
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 421px) and (max-width: 1150px) {
+    .featureCols > .col {
+        width: 50%;
+    }
+    .featureCols > .col:nth-child(3) {
+        clear: both;
+        margin: 0;
+        width: 100%;
+    }
+    .featureCols > .col:nth-child(3) .colList {
+        float: left;
+        width: 50%;
+        width: calc(50% + 12px);
+    }
+    .featureCols > .col:nth-child(3) .colList:first-of-type {
+        margin-right: 12px;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .homeFlipOverlay h3 {
+        font-size: 1.8em;
+    }
+    #policySignUpEmail,
+    #policySignUpEmail + .btn {
+        border-radius: 5px;
+        margin: 0 0 22px 0;
+        width: 100%;
+    }
+    .talkContent .eventPersonInfo .twoThirdWidth {
+        width: 100%;
+    }
+    .talkContent .eventPersonInfo .fellowCard {
+        display: none;
+    }
+    #awardSearch .separatorLabel + a {
+        clear: both;
+    }
+    #scientificAreaFilters .btn {
+        clear: both;
+        margin-top: 0;
+    }
+    .fullForm h4 {
+        width: 26%;
+    }
+    .fullForm .indented {
+        margin-left: 26%;
+    }
+    .newsletterOptions {
+        width: 74%;
+    }
+}
+@media only screen and (min-width: 951px) and (max-width: 1080px) {
+    .fourColRestricted > .col {
+        width: 33.3333333333%;
+    }
+    .sixCol > .col {
+        width: 20%;
+    }
+    .fourColRestricted > .col:nth-child(4n+1),
+    .sixCol > .col:nth-child(6n+1) {
+        clear: none;
+    }
+    .fourColRestricted > .col:nth-child(3n+1),
+    .sixCol > .col:nth-child(5n+1) {
+        clear: both;
+    }
+}
+@media only screen and (min-width: 971px) and (max-width: 1050px) {
+    .fact {
+        display: none;
+    }
+}
+@media only screen and (min-width: 951px) and (max-width: 1050px) {
+    .sessionWrap > h4 {
+        padding-left: 15px;
+    }
+    .breakSession {
+        padding: 0 15px;
+    }
+    .talkContent .fourFifthWidth .fourCol > .col {
+        width: 33.3333333333%;
+    }
+    .talkContent .fourFifthWidth .fourCol > .col:nth-child(3n+1) {
+        clear: both;
+    }
+    .talkContent .fourFifthWidth .fourCol > .col:nth-child(4n+1) {
+        clear: none;
+    }
+}
+@media only screen and (min-width: 1051px) {
+    .largeTabs .tabs li {
+        min-width: 300px;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .collectionSearch .textbox {
+        width: 100%;
+    }
+    .searchToggle {
+        clear: both;
+    }
+    .resultList .twoThirdWidth {
+        width: auto;
+    }
+    #eventDateRange .filter + label {
+        clear: both;
+    }
+    .requiredFieldError {
+        clear: both;
+        margin: -11px 0 33px 225px;
+    }
+    .loginLabel {
+        width: 100px;
+        line-height: 22px;
+    }
+}
+@media only screen and (min-width: 731px) and (max-width: 1000px) {
+    #eventSearch .separatorLabel + a {
+        clear: both;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .threeCol .twoCol > .col {
+        width: 100%;
+    }
+    .featureCols .twoCol > .col {
+        width: 50%;
+    }
+    .offsetForm {
+        width: 100%;
+    }
+    .fellowWelcome h4 {
+        margin-top: 11px;
+    }
+    #eventSearch .expandFilters.active:after {
+        content: '';
+        background: 0;
+    }
+    #eventSearch .searchOptions {
+        border-top: 0;
+        padding: 0;
+    }
+    #eventSearch .searchOptions .largeScreenFilter {
+        display: none;
+    }
+    #eventSearch .searchOptions .smallScreenFilter {
+        display: block;
+    }
+    #eventFilters .filter {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 968px) {
+    .homeFlipOverlay .contentOverlay {
+        background: #333132;
+    }
+    .homeFlipOverlay .tagline {
+        display: none;
+    }
+}
+@media only screen and (min-width: 451px) and (max-width: 950px) {
+    .profileDetails {
+        float: left;
+        padding-right: 25px;
+        width: 40%;
+    }
+    .profileContact {
+        float: left;
+        width: 60%;
+    }
+    .presidentUpdate .oneQuarterWidth {
+        width: 34.0425531915%;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 950px) {
+    .restrictedWidth {
+        width: 38.7096774194%;
+    }
+    .fellowWelcome .separatedLinks {
+        clear: both;
+    }
+    .fellowWelcome .separatedLinks li {
+        border: 0;
+        float: right;
+        clear: both;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 951px) {
+    .startOpen {
+        height: auto;
+    }
+    .loggedInSearch {
+        margin-top: -47px
+    }
+    .fellowCalendar .media {
+        display: block;
+    }
+    .duplicateRegistration {
+        display: none;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .drawer .loggedInUser {
+        display: none;
+    }
+    .compactLink {
+        display: block;
+    }
+    #mainNav,
+    .additionalLink {
+        display: none;
+    }
+    .activeTopLink {
+        padding: 22px 12px 40px 2px;
+    }
+    #showSearch span {
+        position: absolute;
+	    top: -9999em;
+	    left: -9999em;
+    }
+    .topLinks a:hover {
+        text-decoration: none;
+    }
+    .twoThirdWidth,
+    .oneThirdWidth,
+    .oneQuarterWidth,
+    .threeQuarterWidth {
+        padding: 0;
+        width: 100%;
+    }
+    .oneQuarterWidth {
+        margin: 0 0 22px 0;
+    }
+    .twoCol .splitCol {
+        width: 100%;
+    }
+    .fourCol .col {
+        width: 50%;
+    }
+    .sixCol > .col {
+        width: 25%;
+    }
+    .sixCol > .col:nth-child(6n+1) {
+        clear: none;
+    }
+    .eightCol .col {
+        width: 25%;
+    }
+    .fourCol > .col:nth-child(2n+1),
+    .sixCol > .col:nth-child(4n+1),
+    .eightCol > .col:nth-child(4n+1) {
+        clear: both;
+    }
+    .rolodexOverlay {
+        box-shadow: none;
+        top: 22px;
+        right: 25px;
+        bottom: 22px;
+        left: 455px;
+        width: auto;
+    }
+    .reverseRolodex .rolodexOverlay {
+        right: 455px;
+        left: 25px;
+    }
+    .oneThirdWidth .illustration,
+    .oneThirdWidth .pullQuote {
+        float: left;
+    }
+    .oneThirdWidth .illustration {
+        padding: 0 25px 22px 0;
+        max-width: 38.7096774194%;
+    }
+    .oneThirdWidth .pullQuote {
+        padding: 0 0 22px 0;
+    }
+    .oneThirdWidth .illustration + .pullQuote {
+        max-width: 61.2903225806%;
+    }
+    .eventTypeGallery .span2 {
+        position: relative;
+        left: 0;
+        margin: 0;
+        height: auto;
+        width: 100%;
+    }
+    .eventTypeGallery .col:nth-child(2n+1) {
+        clear: none;
+    }
+    .largeSearch .textbox {
+        padding: 0 15px;
+    }
+    .fellowCalendar .media,
+    .sideDownloads {
+        padding: 0;
+    }
+    .projectText,
+    .projectImage {
+        width: 100%;
+    }
+    #stickyPanel {
+        display: none;
+    }
+    .organisers .col,
+    .talkContent .col {
+        width: 25%;
+    }
+    .organisers .col:nth-child(2n+1),
+    .talkContent .col:nth-child(2n+1) {
+        clear: none;
+    }
+    .searchResultImage {
+        margin: 0 0 5px 0;
+        width: 175px;
+    }
+    .searchResultImage + .twoThirdWidth {
+        clear: both;
+    }
+    .fullForm h4,
+    .newsletterOptions {
+        width: 100%;
+    }
+    .fullForm .indented {
+        margin-left: 0;
+    }
+    #fellowSearch .expandFilters.active:after {
+        content: '';
+        background: 0;
+    }
+    #fellowSearch .searchOptions {
+        border-top: 0;
+        padding: 0;
+    }
+    #fellowSearch .smallScreenFilter.smallScreenFilterShown,
+    #fellowSearch .moreFilters.smallScreenFilter,
+    #fellowSearch .allFiltersShown .smallScreenFilter {
+        display: block;
+    }
+    #fellowSearch .largeScreenFilter,
+    #fellowSearch .allFiltersShown .moreFilters,
+    #fellowSearch .smallScreenFilter {
+        display: none;
+    }
+    #fellowSearch .filter {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .pageTabs .tabs li {
+        padding: 0 25px;
+        width: 100%;
+    }
+    .pageTabs .tabs a {
+        box-shadow: none;
+        font: 2.2em/22px 'Proxima Nova', Arial, Helvetica, sans-serif;
+    }
+    .searchOptions .textboxWide,
+    .textboxWide + .preSearchList {
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 900px) {
+    .homeContentBox .halfWidth {
+        width: 100%;
+    }
+    .homeContentBox .rightGutter {
+        padding: 0 0 22px 0;
+    }
+    .homeNarrowCol {
+        padding: 0 0 25px 0;
+    }
+}
+@media only screen  and (max-width: 850px) {
+    #signUpEmail {
+        width: 200px;
+    }
+    .rolodexControls {
+        width: 380px;
+    }
+    .rolodexControls ul {
+        width: 300px;
+    }
+    .rolodexOverlay {
+        left: 405px;
+    }
+    .reverseRolodex .rolodexOverlay {
+        right: 405px;
+        left: auto;
+    }
+    .rolodexOverlay h3 {
+        font-size: 2.2em;
+    }
+    .halfForm label {
+        padding: 0;
+        width: 100%;
+    }
+    .scfForm .fieldPanel,
+    .halfForm .textbox {
+        width: 100%;
+    }
+    .halfForm .btn,
+    .halfForm .scfSubmitButton {
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 785px) {
+    .homeCard .flipContent h2 {
+        font-size: 2.8em;
+    }
+    .homeCard .flipContent p {
+        margin: 0 0 11px 0;
+    }
+    .fact {
+        display: none;
+    }
+}
+@media only screen and (max-width: 785px) {
+    .rolodexControls {
+        width: 355px;
+    }
+    .rolodexControls ul {
+        width: 275px;
+    }
+    .rolodexOverlay {
+        left: 380px;
+    }
+    .reverseRolodex .rolodexOverlay {
+        right: 380px;
+        left: auto;
+    }
+    .heroImageOverlay {
+        position: relative;
+        height: auto;
+    }
+    .heroImageOverlay .contentOverlay {
+        background: #333132;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .rolodex {
+        height: auto;
+    }
+    .rolodexControls,
+    .rolodexContent img {
+        display: none;
+    }
+    .rolodexControls,
+    .rolodexControls ul,
+    .rolodexOverlay,
+    .rolodexContent,
+    .rolodexContent li,
+    .reverseRolodex .rolodexControls,
+    .reverseRolodex .rolodexControls ul,
+    .reverseRolodex .rolodexOverlay,
+    .reverseRolodex .rolodexContent {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+    }
+    .rolodexOverlay {
+        padding: 0;
+    }
+    .rolodexSelect {
+        display: block;
+        margin: 0 0 22px 0;
+        width: 100%;
+    }
+    .rolodexContent li {
+        display: none;
+    }
+    .rolodexContent .current {
+        display: block;
+    }
+    .threeCol .col {
+        width: 50%;
+    }
+    .threeCol > .col:nth-child(3n+1) {
+        clear: none;
+    }
+    .threeCol > .col:nth-child(2n+1) {
+        clear: both;
+    }
+    .breakFirstCol > .col:first-child {
+        width: 100%;
+    }
+    .breakFirstCol > .col:nth-child(2n+1) {
+        clear: none;
+    }
+    .breakFirstCol > .col:nth-child(2n+2) {
+        clear: both;
+    }
+    .fellowAlert {
+        border: 0;
+    }
+    .contactCols .doubleTopGap {
+        margin-top: 0;
+    }
+    .colList > .fellowAlert:nth-child(3n+1) {
+        padding-left: 25px;
+    }
+    .colList > .fellowAlert:nth-child(2n+1) {
+        padding-left: 12px;
+    }
+    .fullForm .btn,
+    .requiredFieldError {
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .shareLinks {
+        border-right: 0;
+        border-bottom: 1px solid #d6d2c4;
+        margin: 0 0 30px 0;
+        padding: 0 0 22px 0;
+        width: 100%;
+    }
+    .signUpForm {
+        clear: both;
+        padding: 0;
+        width: 100%;
+    }
+    .mediaImg {
+        width: 30%;
+    }
+    .separatedField {
+        clear: both;
+    }
+}
+@media only screen and (min-width: 521px) and (max-width: 730px) {
+    .talkContent .fourFifthWidth .fourCol > .col {
+        width: 33.3333333333%;
+    }
+    .talkContent .fourFifthWidth .fourCol > .col:nth-child(3n+1) {
+        clear: both;
+    }
+    .talkContent .fourFifthWidth .fourCol > .col:nth-child(4n+1) {
+        clear: none;
+    }
+    .additionalEventInfo {
+        display: none;
+    }
+}
+@media only screen and (min-width: 731px) {
+    .expandFilters.active:after {
+        content: '';
+        background: #6f263d;
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        margin: 0 0 0 -2px;
+        width: 4px;
+        height: 22px;
+    }
+    #fellowSearch .allFiltersShown .expandFilters.active:after {
+        content: '';
+        background: 0;
+    }
+    .searchOptions {
+        border-top: 4px solid #6f263d;
+        padding: 22px 0 0 0;
+    }
+    #filters.searchOptions,
+    #eventDateRange.searchOptions,
+    #eventFilters.searchOptions {
+        border-top: 0;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .largeScreenFilter {
+        display: none;
+    }
+    .smallScreenFilter {
+        display: block;
+    }
+    .searchOptions .mediumLabel {
+        float: none;
+        clear: both;
+        display: block;
+        margin: 0 0 22px 0;
+        padding: 0;
+    }
+    .searchOptions .dateSeparator {
+        float: left;
+        clear: none;
+        display: inline;
+        margin: 5px 25px 22px 0;
+    }
+    .searchOptions .styledSelect,
+    .keyword,
+    .keyword .textbox,
+    .searchOptions .filter,
+    .smallFullWidth {
+        width: 100%;
+    }
+    .keyword .media {
+        float: none;
+    }
+    #eventSearch .separatorLabel {
+        clear: both;
+        padding: 0;
+    }
+    .featureCols .twoCol > .col {
+        width: 100%;
+    }
+    .sessionWrap > h4 {
+        padding: 20px 20px 0 20px;
+        width: 70%;
+    }
+    .sessionHeading {
+        clear: both;
+        padding: 0 20px;
+    }
+    .talkContent {
+        padding: 22px 20px;
+    }
+    .resultsFilter {
+        display: none;
+    }
+    .resultsFilterSelect {
+        display: block;
+    }
+}
+@media only screen and (min-width: 691px) {
+    .featureImage img {
+        max-width: none;
+    }
+}
+@media only screen and (min-width: 521px) and (max-width: 690px) {
+    .journalCard .front .flipContent {
+        height: 66px;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .darkContainer {
+        background: #333132;
+        margin: 0 -25px 22px -25px;
+        padding: 22px 25px 0 25px;
+    }
+    .darkContainer.plushBottom {
+        margin-bottom: -22px;
+    }
+    .darkContainer h2,
+    .darkContainer p,
+    .darkContainer a {
+        color: #fff;
+    }
+    .darkContainer .back {
+        background: #ba0c2f;
+    }
+    .slideableControlsWrapper {
+        position: relative;
+    }
+    .slideableWrapper {
+        margin: -22px auto 0 auto;
+        height: 374px;
+        z-index: 20;
+    }
+    .slideable .flipContainer {
+        height: 330px;
+        width: 240px;
+    }
+    .fellowCard .front .flipContent {
+        padding: 5px 8px;
+    }
+    .slideable .fellowCard .front .flipContent {
+        height: 90px;
+    }
+    .flipHighlight {
+        line-height: 33px;
+    }
+    .slideableControls {
+        position: absolute;
+        top: 150px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+    }
+    .slideableControls .prevItem {
+        margin: 0 130px 0 0;
+        color: #fff;
+    }
+    .slideableControls .nextItem {
+        margin: 0 0 0 130px;
+        color: #fff;
+    }
+    .featureImage .imageOverlay {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+    }
+    .twoColWide .spotlight {
+        width: 100%;
+    }
+    .fourColRestricted > .col {
+        width: 50%;
+    }
+    .sixCol > .col {
+        width: 33.3333333333%;
+    }
+    .fourColRestricted > .col:nth-child(3n+1),
+    .sixCol > .col:nth-child(4n+1) {
+        clear: none;
+    }
+    .fourColRestricted > .col:nth-child(2n+1),
+    .sixCol > .col:nth-child(3n+1) {
+        clear: both;
+    }
+    .organisersWrapper {
+        position: relative;
+        margin: 0 auto;
+        height: 394px;
+        overflow: hidden;
+    }
+    .organisersWrapper .colList {
+        position: absolute;
+        left: 0;
+        margin: 0;
+        -moz-transition: left 1s ease-in-out;
+        -o-transition: left 1s ease-in-out;
+        -webkit-transition: left 1s ease-in-out;
+        transition: left 1s ease-in-out;
+    }
+    .organisersWrapper .fourCol .col {
+        clear: none;
+        margin-right: 25px;
+        padding: 0;
+        width: 240px;
+    }
+    .eventPersonInfo {
+        margin-top: -44px;
+        margin-bottom: 44px;
+    }
+    .eventPersonInfo p {
+        color: #333132;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .homeCard .flipContent {
+        padding: 22px 20px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .contentBox {
+        padding: 22px 20px;
+    }
+    .tabContent .contentBox {
+        padding: 44px 20px 0 20px;
+    }
+    .wrapper {
+        padding: 0;
+    }
+    .headerContainer {
+        padding: 22px 20px;
+    }
+    .twoColWide .col {
+        width: 100%;
+    }
+    .homeCard {
+        padding: 0 20px;
+    }
+    .darkContainer {
+        margin: 0 -20px 22px -20px;
+        padding: 22px 20px 0 20px;
+    }
+    .backBtn {
+        float: left;
+        margin: 0 0 22px 0;
+    }
+    .backBtn + h1 {
+        clear: both;
+    }
+    .youtube .supporting-text {
+        clear: both;
+        width: 100%;
+        position: static;
+        margin-bottom: 44px;
+    }
+    .youtube .youtubeVideo {
+        padding: 0;
+    }
+    .pictureLibrary .left,
+    .pictureLibrary .right {
+        padding: 0;
+        width: 100%;
+    }
+    .fellowWelcome .twoCol .col {
+        width: 100%;
+    }
+    .downloadList.halfWidth {
+        width: 100%;
+    }
+    .talkContent {
+        margin: 0 -20px;
+        width: 107%;
+        width: calc(100% + 40px);
+    }
+    .eventPersonInfo {
+        padding: 18px 20px;
+    }
+    .panel {
+        margin: 0 -20px 22px -20px;
+        padding: 22px 20px;
+    }
+    .filterContainer {
+        padding: 0 0 22px 0;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .additionalSearchInfo {
+        display: none;
+    }
+    .moreResults p {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 581px) {
+    .statement .link {
+        margin: 0 100px 0 0;
+    }
+    .statement .link:hover {
+        border-bottom: 1px solid #c7bfbd;
+    }
+    .statement .link:after {
+        content: '';
+        background: #ba0c2f;
+        position: absolute;
+        bottom: 33px;
+        margin: 0 0 0 10px;
+        height: 6px;
+        width: 6px;
+        -moz-transition: height 0.2s linear;
+        -o-transition: height 0.2s linear;
+        -webkit-transition: height 0.2s linear;
+        transition: height 0.2s linear;
+    }
+    .statement .link:hover:after {
+        height: 0;
+    }
+    .statement .more {
+        background: #fff;
+        position: absolute;
+        bottom: 30px;
+        margin: 0 0 0 -90px;
+        -moz-transition: height 0.2s 0.2s linear;
+        -o-transition: height 0.2s 0.2s linear;
+        -webkit-transition: height 0.2s 0.2s linear;
+        transition: height 0.2s 0.2s linear;
+    }
+    .statement .link:hover + .more {
+        height: 18px;
+    }
+    .textbox.big {
+        height: 66px;
+        line-height: 66px;
+        font-size: 2.2em;
+    }
+    .btn.big {
+        padding: 21px 30px;
+        font-size: 2.2em;
+    }
+    .largeSearch .iconSearch:before {
+        font-size: 28px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .headerContainer .headerLogo {
+        background-image: url(/images/Redesign2015/logo-vertical.png);
+        height: 66px;
+        width: 127px;
+    }
+    .stickyHeader {
+        background: #ba0c2f;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px 20px;
+        width: 100%;
+        z-index: 100;
+    }
+    .stickyHeader .headerLogo {
+        background-size: 100% 100%;
+        margin: 6px 0;
+        height: 12px;
+        width: 180px;
+    }
+    .stickyHeader a {
+        float: left;
+        text-decoration: none;
+    }
+    .statement {
+        margin: 0 0 22px 0;
+        font-size: 2.2em;
+        line-height: 1.5;
+    }
+    .statement .more {
+        display: block;
+        height: auto;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+    .homeContentBox .halfWidth {
+        width: 100%;
+    }
+    .homeContentBox .rightGutter {
+        padding: 0 0 22px 0;
+    }
+    .homeNarrowCol {
+        padding: 0 0 25px 0;
+    }
+    #signUpEmail {
+        clear: both;
+    }
+    .signUpForm {
+        float: left;
+    }
+    .shareLinks {
+        margin: 0 0 22px 0;
+    }
+    .shareLinks span {
+        display: block;
+    }
+    .largeSearch .btn.iconSearch {
+        padding: 10px 15px;
+    }
+    .searchOptions .textboxWide,
+    .textboxWide + .preSearchList {
+        width: 200px;
+    }
+    .keyword .textbox {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .spotlight .imageOverlay {
+        box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.17);
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+    }
+    .offsetForm .textbox {
+        width: 100%;
+    }
+    .offsetForm .btn {
+        width: 100%;
+    }
+    .eventDates .col {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 521px) {
+    .speakerContent .reveal.active:after {
+        content: '';
+        background: #ba0c2f;
+        position: absolute;
+        left: 50%;
+        margin: 5px 0 0 -2px;
+        width: 4px;
+        height: 154px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .siteSearch {
+        margin: 0;
+        padding: 0 20px;
+        width: 100%;
+    }
+    #siteSearch {
+        width: 100%;
+    }
+    .twoCol .col,
+    .threeCol .col,
+    .fourCol .col {
+        width: 100%;
+    }
+    .threeCol .twoCol > .col {
+        width: 50%;
+    }
+    .featureCols .twoCol > .col {
+        width: 100%;
+    }
+    .featureCols .doubleTopGap {
+        margin-top: 0;
+    }
+    .eventTypeGallery .supportingContent {
+        position: relative;
+    }
+    .talkContent .col {
+        width: 50%;
+    }
+    .talkContent .col:nth-child(2n+1) {
+        clear: both;
+    }
+    .oneFifthWidth,
+    .fourFifthWidth {
+        width: 100%;
+    }
+    .sessionHeading {
+        padding-top: 20px;
+    }
+    .newsletterOptions {
+        margin: 0;
+    }
+    .newsletterOptions > div {
+        width: 100%;
+    }
+    .blockCheckbox + label {
+        margin-right: 25px;
+    }
+    .fullForm .textbox,
+    .fullForm .btn {
+        width: 100%;
+    }
+    .colList > .fellowAlert,
+    .colList > .fellowAlert:nth-child(3n+1) {
+        padding-left: 12px;
+    }
+    #fellowHubSearch .tabs li {
+        padding: 0 25px;
+        width: 100%;
+    }
+    #fellowHubSearch .tabs a {
+        box-shadow: none;
+        font: 2.2em/22px 'Proxima Nova', Arial, Helvetica, sans-serif;
+    }
+    .quickSearch .textbox,
+    .quickSearch .btn,
+    h2.left + .btn {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 501px) {
+    .clearTable td:first-child {
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .homeFlipOverlay .contentOverlay {
+        background: #333132;
+        text-align: left;
+    }
+    .homeFlipOverlay .sectionLink {
+        right: auto;
+        left: 120px;
+        margin: 10px 0;
+    }
+    .homeFlipOverlay .tagline {
+        display: none;
+    }
+    .eightCol .col {
+        width: 50%;
+    }
+    .eightCol > .col:nth-child(2n+1) {
+        clear: both;
+    }
+    .awardsList .mediaImg {
+        width: 100%;
+    }
+    .awardsList .media,
+    .awardedGrants .media {
+        padding: 0;
+        width: 100%;
+    }
+    table tr {
+        display: block;
+        margin: 0 0 22px 0;
+    }
+    table th {
+        display: none;
+    }
+    table td {
+        border-bottom: 3px solid #fff;
+        display: block;
+        position: relative;
+        padding-left: 40%;
+        width: 100%;
+    }
+    table td:before {
+        content: attr(data-th);
+        background: #6f263d;
+        border-right: 3px solid #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 11px;
+        width: 28%;
+        color: #fff;
+        text-align: left;
+    }
+    .clearTable td {
+        border-bottom: 0;
+        padding-left: 45%;
+    }
+    .clearTable td:before {
+        background: 0;
+        border-right: 0;
+        padding: 5px 11px 5px 0;
+        width: 35%;
+        color: #333132;
+        font-family: 'Proxima Nova Semi', Arial, Helvetica, sans-serif;
+    }
+    .ui-datepicker td:before {
+        display: none;
+    }
+    .oneThirdWidth .illustration,
+    .oneThirdWidth .pullQuote,
+    .twoThirdWidth .illustration,
+    .twoThirdWidth .pullQuote,
+    .eventOverview .illustration {
+        padding: 0 0 22px 0;
+        max-width: none;
+    }
+    .collectionSearch .btn,
+    .searchToggle {
+        width: 100%;
+    }
+    .sixCol > .col {
+        width: 50%;
+    }
+    .sixCol > .col:nth-child(3n+1) {
+        clear: none;
+    }
+    .sixCol > .col:nth-child(2n+1) {
+        clear: both;
+    }
+    .sessionWrap {
+        margin-top: 22px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .fellowCard + .fellowText {
+        margin: 22px 0 0 0;
+    }
+    .quote {
+        padding: 22px 10px;
+    }
+    .quote p:before {
+        top: -22px;
+        left: -10px;
+        font-size: 20px;
+    }
+    .quote footer:before {
+        right: -10px;
+        bottom: -22px;
+        font-size: 20px;
+    }
+    .fellowWelcome .separatedLinks {
+        clear: both;
+    }
+    .fellowWelcome .separatedLinks li {
+        border: 0;
+        float: right;
+        clear: both;
+        margin: 0;
+        padding: 0;
+    }
+    .resultsFilterSelect,
+    .searchOptions .textboxWide,
+    .textboxWide + .preSearchList,
+    #eventDateRange .btn {
+        width: 100%;
+    }
+    #toDate {
+        margin-right: 0;
+    }
+    .journalSearch .textbox {
+        width: 225px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .presidentUpdate .media {
+        clear: both;
+        padding: 0;
+    }
+    #eventDateRange .filter + label {
+        float: left;
+        margin: 5px 25px 0 0;
+        width: 25px;
+    }
+    .searchOptions .dateSeparator {
+        clear: both;
+        width: 25px;
+    }
+    .sessionWrap > h4 {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .globalFooter .break {
+        display: block;
+    }
+    .heroImageOverlay .titleOverlay {
+        position: relative;
+        height: 44px;
+        width: 100%;
+    }
+    .heroImageOverlay .contentOverlay {
+        padding: 10px;
+    }
+    .homeCard .flipContent h2 {
+        font-size: 2.8em;
+    }
+    .homeCard .flipContent p {
+        margin: 0 0 11px 0;
+    }
+    .separatedLinks.largeLinks li {
+        border-right: 0;
+        clear: both;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .fact {
+        display: none;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .signUpForm label {
+        margin: 0 0 10px 0;
+    }
+    #signUpEmail {
+        border-radius: 5px;
+        margin: 0 0 22px 0;
+        width: 100%;
+    }
+    .signUpForm .btn {
+        border-radius: 5px;
+        width: 100%;
+    }
+    .threeCol .twoCol > .col {
+        width: 100%;
+    }
+    .darkContainer {
+        padding: 22px 10px 0 10px;
+    }
+    .darkContainer h2 {
+        padding: 0 10px;
+    }
+    #eventSearch .tabs li {
+        padding: 0 25px;
+        width: 100%;
+    }
+    #eventSearch .tabs a {
+        box-shadow: none;
+        font: 2.2em/22px 'Proxima Nova', Arial, Helvetica, sans-serif;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .connectLinks a {
+        margin: 0 0 0 2px;
+    }
+    .stickyHeader {
+        padding: 15px 20px 15px 10px;
+    }
+}

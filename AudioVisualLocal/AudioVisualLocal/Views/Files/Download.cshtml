@@ -1,0 +1,50 @@
+﻿@model AudioVisualModule.Models.Files
+@using AudioVisualModule;
+
+@Styles.Render("~/Content/PagedList.css")
+@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["Failed"] != null)
+{
+    <p id="Message" class="failed">
+        @TempData["Failed"]
+    </p>
+
+}
+<h2>Download Files</h2>
+
+@using (Html.BeginForm("Download", "Files", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div>
+
+            @Html.Label("Download a file:", new { @class = "mediumLabel" })
+
+        </div>
+
+        <label class="btn btnRounded" id="inputlabel">
+            Browse <input type="file" id="inputfile" name="file" accept='.pdf,.doc' />
+        </label>
+        <p><label id="filename"></label></p>
+
+        <span id="lblError" style="color: red;"></span>
+        <br />
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="mysubmit" type="submit" value="Upload" class="btn btnRounded" />
+                <input type="button" id="backbutton" name="backbutton" onclick="location.href='@Url.Action("Index", "Files")'" class="btn btnRounded btnSecondary" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+}
+
+

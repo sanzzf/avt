@@ -1,0 +1,75 @@
+/**************************************************************************************************
+* 	Internet Explorer 8 and below specific styles
+**************************************************************************************************/
+.colList .newRow {
+    clear: both;
+}
+.noBorder {
+    border-right: 0;
+}
+.reducedSpacing {
+    padding-left: 12px;
+}
+#sideNav ul ul {
+    font-size: 16px;
+}
+.fellowAlert .iconCross {
+    margin: -10px 10px 0 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)"; /* horrible rotation hack for IE, using radians */
+}
+.hideBtn.iconCross:before {
+    content: '';
+    margin: 0;
+}
+.halfForm .datepicker {
+    background-position: 96% center;
+}
+.toggleExpandable .iconArrowDown.open:before {
+    content: '\e608';
+}
+.eventTypeGallery .eventType a:before,
+.rolodexControls li a:before {
+    content: '';
+}
+.eventTypeGallery .eventType a.active:before,
+.rolodexControls .current a:before {
+    content: '\e607';
+}
+.separatedLinks li {
+    border-right: 0;
+    border-left: 1px solid #d6d2c4;
+    margin: 0 0 0 12px;
+    padding: 0 0 0 12px;
+}
+.separatedLinks.largeLinks li {
+    margin: 0 0 0 25px;
+    padding: 0 0 0 25px;
+}
+.separatedLinks li:first-child,
+.separatedLinks.largeLinks li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+.headerLogo {
+    background-image: url(/images/Redesign2015/ie/logo.png);
+}
+input[type=password] {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.imageContainer .ieIconPlay {
+    display: inline-block;
+    font-family: 'icomoon';
+    line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -30px;
+    color: #fff;
+    font-size: 60px;
+    text-decoration: none;
+    z-index: 10;
+}

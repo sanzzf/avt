@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>@ViewBag.Title- Audio Visual Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    @Styles.Render("~/Content/re")
+    @Styles.Render("~/Content/css")
+    <!--usage-->
+    @RenderSection("usage", required: false)
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="/Content/Redesign2015/ie8.css" media="screen" />
+        <script src="/Scripts/Redesign2015/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="pageWrap">
+
+        @Html.Partial("_SideNavigation")
+
+
+        <div class="siteContainer">
+
+            @Html.Partial("_Header")
+
+            <div class="wrapper cf">
+
+                <noscript>
+                    <p>You currently have JavaScript disabled in your web browser, please enable JavaScript to view our website as intended.</p>
+                    <p><a href="http://www.enable-javascript.com/">Here are the instructions of how to enable JavaScript in your browser.</a></p>
+                </noscript>
+
+                <section class="contentBox bottomGap cf">
+                    <h1 class="hideheader">Audio Visual Application</h1>
+
+                </section>
+
+                <section class="contentBox bottomGap cf">
+
+                    @Html.Partial("_Feedback")
+                    @RenderBody()
+
+                </section>
+
+                @Html.Partial("_Footer")
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    @Scripts.Render("~/Scripts/jquery")
+    @Scripts.Render("~/Scripts/jquery-validate")
+    @Scripts.Render("~/Scripts/jquery-validate-unobstrusive")
+    <script src="~/Scripts/Libraries/jquery.unobtrusive-ajax.min.js"></script>
+    @Scripts.Render("~/Scripts/jquery-ui")
+    @Scripts.Render("~/Scripts/re")
+
+    <!--[if lt IE 9]>
+        <script src="/Scripts/Redesign2015/ie8.js"></script>
+    <![endif]-->
+
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

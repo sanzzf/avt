@@ -1,0 +1,226 @@
+﻿.heroImageOverlayContainer {
+    position: relative;
+}
+.heroImageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 110px;
+    width: 100%;
+    font-family: 'Proxima Nova Semi', Arial, Helvetica, sans-serif;
+}
+.heroImageOverlay h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+    font-size: 1.8em;
+    font-family: 'Proxima Nova Semi', Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+.heroImageOverlay .titleOverlay {
+    background: #ba0c2f;
+    position: relative;
+    height: 100%;
+    width: 110px;
+    z-index: 5;
+}
+.heroImageOverlay .contentOverlay {
+    background: rgba(000,000,000,0.6);
+    position: absolute;
+    padding: 10px 120px 10px 20px;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+.heroImageOverlay h3 {
+    font-size: 2.4em;
+}
+.heroImageOverlay a {
+    color: #fff;
+    font-family: 'Proxima Nova Semi', Arial, Helvetica, sans-serif;
+}
+.heroImageOverlay p {
+    color: #fff;
+    margin: 0px;
+}
+/* Youtube Featured Block*/
+.youtube {
+    position: relative;
+}
+.youtube .supporting-text {
+    background: #333132;
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    padding: 20px;
+}
+.youtube .supporting-text h3 {
+    color: #fff;
+    font: 2.4em/1.2 'Proxima Nova Semi', Arial, Helvetica, sans-serif;
+}
+.youtube .youtubeVideo {
+    padding-right: 40%;
+    background-color: #1b1b1b;
+}
+
+/* Journal Card*/
+.journalCard .front .toggleFlip {
+    background: 0;
+    position: relative;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); /* Required for IE8 and below only */
+}
+.journalCard .front .toggleFlip:before {
+    color: #fff;
+}
+.journalCard .front .overlayCaption {
+    background: #d6d2c4;
+    color: #333132;
+}
+.journalCard .front .flipContent {
+    height: auto;
+}
+.journalCard .front .flipLink {
+    background: #333132;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    -moz-transition: background .25s ease-in;
+    -o-transition: background .25s ease-in;
+    -webkit-transition: background .25s ease-in;
+    transition: background .25s ease-in;
+}
+.journalCard .front .flipLink:hover {
+    background: #414141;
+}
+.journalCard.flipContainer {
+    height: 262px;
+}
+/* Journal Card Variations */
+.journalCard .front .flipContent.green {
+    background: #55ba46;
+}
+.journalCard .front .flipContent.blue {
+    background: #0093d0;
+}
+.journalCard .front .flipContent.purple {
+    background: #a3228d;
+}
+.journalCard .front .flipContent.darkGrey {
+    background: #333132;
+}
+.journalCard .front .flipContent.lightGrey {
+    background: #938884;
+}
+
+/* Journal Search */
+.journalSearch .textbox {
+    width: 345px;
+}
+
+/* Big Search Components */
+.textbox.big {
+    padding: 32px 15px;
+    font-size: 2.2em;
+}
+.btn.big {
+    padding: 24px 30px;
+    font-size: 2.2em;
+}
+
+/* Styling inputs */
+input[type=radio] {
+    margin: 0px 10px 0 0;
+}
+
+/* Grid Classes */
+.colList.collapse {
+    margin: 0px;
+}
+.colList.collapse > .col {
+    padding: 0px;
+}
+.col.span2 {
+    width: 50%;
+}
+
+/* Event type gallery */
+.eventTypeGallery .eventTypeFeatured {
+    position: absolute;
+    display: none;
+}
+.eventTypeGallery .eventTypeFeatured.show {
+    display: block;
+}
+.eventTypeGallery .eventType a {
+    background: #d6d2c4;
+    display: block;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    height: 44px;
+    width: 100%;
+    color: #333132;
+    font-size: 1.8em;
+    text-align: left;
+    text-decoration: none;
+    -moz-transition: all linear .25s;
+    -o-transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+    transition: all linear .25s;
+    overflow: hidden;
+}
+.eventTypeGallery .eventType a.active {
+    background-color: #6f263d;
+    color: #FFF;
+}
+.eventTypeGallery .eventType a.active:before {
+    content: '\e60a';
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    font-family: 'icomoon';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 25px;
+    color: #FFF;
+    transition: all ease-in-out .25s;
+}
+.eventTypeGallery .eventType a:before {
+    content: '\e60a';
+    position: absolute;
+    right: -25px;
+    display: inline-block;
+    font-family: 'icomoon';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 25px;
+    color: #FFF;
+}
+.eventTypeGallery .supportingContent {
+    width: 100%;
+    background-color: #6f263d;
+    padding: 12px;
+    top: -13px;
+    position: relative;
+}
+.eventTypeGallery .supportingContent h4 {
+    margin: 0 0 .5em 0;
+}
+.eventTypeGallery .supportingContent *:last-child {
+    margin: 0px;
+}
+.eventTypeGallery .supportingContent h4,
+.eventTypeGallery .supportingContent p,
+.eventTypeGallery .supportingContent a {
+    color: #FFF;
+}

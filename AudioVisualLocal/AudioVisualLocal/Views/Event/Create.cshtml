@@ -1,0 +1,105 @@
+﻿@model AudioVisualModule.Models.Event
+    @using AudioVisualModule;
+
+@Styles.Render("~/Content/PagedList.css")
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["Failed"] != null)
+{
+    <p id="Message" class="failed">
+        @TempData["Failed"]
+    </p>
+
+}
+
+<h2>Create Event</h2>
+
+@using (Html.BeginForm("Create", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="borderline">
+            <p>
+                <input type="radio" name="user" id="existing" checked="checked" /><label class="inlineLabel">Existing User</label>
+                <input type="radio" name="user" id="new" /><label class="inlineLabel">New User</label>
+            </p>
+            <div class="form-group">
+
+
+                @Html.LabelFor(m => Model.UserEmail, "Enter User Email", htmlAttributes: new { @class = "mediumLabel" })
+                <p>
+                    @*@Html.DropDownList("dropdownUser", (SelectList)ViewBag.ApplicationUser, "Choose a user...")*@
+                    @Html.EditorFor(Model => Model.UserEmail, new { htmlAttributes = new { @class = "textbox med block", @id = "new" } })
+                    @Html.ValidationMessageFor(Model => Model.UserEmail, "", new { @class = "text-danger" })
+                </p>
+                <div class="form-group" id="NewUser">
+                    @Html.Label("Enter First Name", htmlAttributes: new { @class = "mediumLabel" })
+                    <p>
+                        @Html.Editor("FirstName", new { htmlAttributes = new { @class = "textbox med block", @name = "firstname" } })
+                        @Html.ValidationMessage("First Name", "", new { @class = "text-danger" })
+                    </p>
+                    @Html.Label("Last Name", htmlAttributes: new { @class = "mediumLabel" })
+                    <p>
+                        @Html.Editor("LastName", new { htmlAttributes = new { @class = "textbox med block", @name = "lastname" } })
+                        @Html.ValidationMessage("Last Name", "", new { @class = "text-danger" })
+                    </p>
+                    @Html.Label("Enter your Organisation", htmlAttributes: new { @class = "mediumLabel" })
+                    <p>
+                        @Html.Editor("Organisation", new { htmlAttributes = new { @class = "textbox med block", @name = "organisation" } })
+                        @Html.ValidationMessage("Organisation", "", new { @class = "text-danger" })
+                    </p>
+                    @Html.Label("Enter Phone Number", htmlAttributes: new { @class = "mediumLabel" })
+                    <p>
+                        @*@Html.DropDownList("dropdownUser", (SelectList)ViewBag.ApplicationUser, "Choose a user...")*@
+                        @Html.Editor("Phone Number", new { htmlAttributes = new { @class = "textbox med block" } })
+                        @Html.ValidationMessage("Phone Number", "", new { @class = "text-danger" })
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.Name, "Event Name",htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.EditorFor(Model => Model.Name, new { htmlAttributes = new { @class = "textbox med block" } })
+                @Html.ValidationMessageFor(Model => Model.Name, "", new { @class = "text-danger" })
+            </p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.Description, "Event Description", htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.EditorFor(Model => Model.Description, new { htmlAttributes = new { @class = "textbox med block", rows="10" } })
+
+            </p>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.StartDate, "Event Start Date", htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.TextBoxFor(Model => Model.StartDate, new { @class = "textbox med block datepicker", placeholder = "Enter start date here..." })
+                @Html.ValidationMessageFor(Model => Model.StartDate, "", new { @class = "text-danger", id="startdatevalidation"})
+            </p>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.EndDate, "Event End Date", htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.TextBoxFor(Model => Model.EndDate, new { @class = "textbox med block datepicker", placeholder = "Enter end date here..." })
+                @Html.ValidationMessageFor(Model => Model.EndDate, "", new { @class = "validationText", id="enddatevalidation" })
+            </p>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="mysubmit" type="submit" value="Create" class="btn btnRounded" />
+                <input type="button" id="backbutton" name="backbutton" onclick="location.href='@Url.Action("Index", "Event")'" class="btn btnRounded btnSecondary" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+}
+
+

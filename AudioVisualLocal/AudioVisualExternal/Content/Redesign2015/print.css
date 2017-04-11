@@ -1,0 +1,46 @@
+/**************************************************************************************************
+* 	Print CSS - contains styles for printing
+**************************************************************************************************/
+.globalHeader,
+nav,
+.shareLinks,
+.signUpForm,
+.backToTop,
+.globalFooter p,
+.toggleFlip,
+.back,
+.statement .more,
+#fellowHubSearch,
+.backBtn,
+#stickyPanel,
+.rolodex {
+	display: none;
+}
+.globalFooter {
+    margin: 0;
+}
+.globalFooter .crest {
+    margin-top: 0;
+}
+.homeContentBox .halfWidth,
+.twoCol > .col {
+    padding: 0;
+    width: 100%;
+}
+.twoCol > .col .twoCol > .col {
+    width: 50%;
+}
+.btn,
+.filter {
+    border: 1px solid #e8e6df;
+}
+.filter.active {
+    border: 3px solid #e8e6df;
+}
+.largeTabs .selectedTab a,
+.largeTabs .tabContent,
+.btnBordered,
+.filter,
+.filter.active {
+    box-shadow: none;
+}

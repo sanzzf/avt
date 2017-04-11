@@ -1,0 +1,80 @@
+﻿@model PagedList.IPagedList<AudioVisualModule.Models.Files>
+@using PagedList.Mvc; .
+
+@Styles.Render("~/Content/PagedList.css")
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["Success"] != null)
+{
+    <p id="Message" class="success">
+        @TempData["Success"]
+    </p>
+
+}
+
+
+@using (Html.BeginForm("Index", "Files", FormMethod.Get))
+{
+    <div class="form-group">
+        @Html.Label("Find file:", new { @class = "mediumLabel left" })
+        <div class="keyword left">
+            <input type="submit" value="Search" class="btn btnJoined right" />
+            <p class="media left">
+                @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "textbox textboxWide textboxJoined", @placeholder = "Type a phrase or email" })
+
+            </p>
+        </div>
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("File Name", "Index", new { sortOrder = ViewBag.FileNameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("File Path", "Index", new { sortOrder = ViewBag.FilePathSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("DateCreated", "Index", new { sortOrder = ViewBag.DateCreatedSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Event Associated", "Index", new { sortOrder = ViewBag.EventAssociatedSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th></th>
+    </tr>
+    @*@foreach (var item in Model)
+    {
+        <tr>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit Files", "EditFile", new { id = item.Id }) |
+                @Html.ActionLink("Preview", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+        *@
+</table>
+
+<div class="center">
+    <p>
+       @* Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, @class = "page" }))
+    *@
+    </p>
+</div>

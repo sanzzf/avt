@@ -1,0 +1,55 @@
+﻿@model AudioVisualModule.Models.Event
+@using AudioVisualModule;
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Edit profile</h2>
+
+@using (Html.BeginForm("Edit", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(Model => Model.Id)
+        <p>
+            <input type="button" value="Upload File" onclick="location.href='@Url.Action("Register", "Account")'" class="btn btnRounded" />
+            
+        </p>
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.Name, htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.EditorFor(Model => Model.Name, new { htmlAttributes = new { @class = "textbox med block" } })
+                @Html.ValidationMessageFor(Model => Model.Name, "", new { @class = "text-danger" })
+            </p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.Description, htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.EditorFor(Model => Model.Description, new { htmlAttributes = new { @class = "textbox med block" } })
+                @Html.ValidationMessageFor(Model => Model.Description, "", new { @class = "text-danger" })
+            </p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.StartDate, htmlAttributes: new { @class = "mediumLabel" })
+            <p>
+                @Html.EditorFor(Model => Model.EndDate, new { htmlAttributes = new { @class = "textbox med block" } })
+                @Html.ValidationMessageFor(Model => Model.EndDate, "", new { @class = "text-danger" })
+            </p>
+        </div>
+
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="mysubmitadmin" type="submit" value="Save" class="btn btnRounded" />
+                <input type="button" value="Cancel" onclick="location.href='@Url.Action("Index", "Event")'" class="btn btnRounded btnSecondary" />
+            </div>
+        </div>
+    </div>
+                }

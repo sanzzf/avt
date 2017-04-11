@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AB09279-0188-45E8-B5FE-3EF68BFD034E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AudioVisualLocal</RootNamespace>
+    <AssemblyName>AudioVisualLocal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Authentication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Authentication.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Authentication.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Authentication.Cookies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Authentication.Cookies.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Authentication.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Cryptography.Internal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cryptography.Internal.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Cryptography.Internal.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Cryptography.KeyDerivation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cryptography.KeyDerivation.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Cryptography.KeyDerivation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.DataProtection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.DataProtection.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.DataProtection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.DataProtection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.DataProtection.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.DataProtection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FileProviders.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FileProviders.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.FileProviders.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Hosting.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Hosting.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Hosting.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Http, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Http.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Http.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Http.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Http.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Http.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Http.Extensions.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Http.Features, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Http.Features.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.Http.Features.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.WebUtilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebUtilities.1.0.0-rc1-final\lib\net451\Microsoft.AspNet.WebUtilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.OptionsModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.OptionsModel.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.OptionsModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.PlatformAbstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.PlatformAbstractions.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.PlatformAbstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.WebEncoders, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.WebEncoders.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.WebEncoders.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.WebEncoders.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.WebEncoders.Core.1.0.0-rc1-final\lib\net451\Microsoft.Extensions.WebEncoders.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.1.0.0-rc1-final\lib\net451\Microsoft.Net.Http.Headers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=8.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.8.1.1\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.2\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Internal\Controllers\EventController.cs" />
+    <Compile Include="Areas\Internal\Controllers\FilesController.cs" />
+    <Compile Include="Areas\Internal\InternalAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\FilesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\AudioVisualModule\Content\main.css">
+      <Link>Content\main.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\PagedList.css">
+      <Link>Content\PagedList.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\craig.css">
+      <Link>Content\Redesign2015\craig.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\events.css">
+      <Link>Content\Redesign2015\events.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\2a961063-ea56-4a4b-8cea-bdae32edb0e2.svg">
+      <Link>Content\Redesign2015\Fonts\2a961063-ea56-4a4b-8cea-bdae32edb0e2.svg</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\8152bc4e-d700-4c78-b6be-326893e6f53f.svg">
+      <Link>Content\Redesign2015\Fonts\8152bc4e-d700-4c78-b6be-326893e6f53f.svg</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\ab9cd062-380f-4b53-b1a7-c0bec7402235.svg">
+      <Link>Content\Redesign2015\Fonts\ab9cd062-380f-4b53-b1a7-c0bec7402235.svg</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg">
+      <Link>Content\Redesign2015\Fonts\ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\icomoon.svg">
+      <Link>Content\Redesign2015\Fonts\icomoon.svg</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\ie8.css">
+      <Link>Content\Redesign2015\ie8.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\main.css">
+      <Link>Content\Redesign2015\main.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\modular.css">
+      <Link>Content\Redesign2015\modular.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\print.css">
+      <Link>Content\Redesign2015\print.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\responsive.css">
+      <Link>Content\Redesign2015\responsive.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\site.css">
+      <Link>Content\site.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\accordion.css">
+      <Link>Content\themes\base\accordion.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\all.css">
+      <Link>Content\themes\base\all.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\autocomplete.css">
+      <Link>Content\themes\base\autocomplete.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\base.css">
+      <Link>Content\themes\base\base.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\button.css">
+      <Link>Content\themes\base\button.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\core.css">
+      <Link>Content\themes\base\core.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\datepicker.css">
+      <Link>Content\themes\base\datepicker.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\dialog.css">
+      <Link>Content\themes\base\dialog.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\draggable.css">
+      <Link>Content\themes\base\draggable.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png">
+      <Link>Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png">
+      <Link>Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png">
+      <Link>Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png">
+      <Link>Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png">
+      <Link>Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png">
+      <Link>Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png">
+      <Link>Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <Link>Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_222222_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_222222_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_2e83ff_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_2e83ff_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_444444_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_444444_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_454545_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_454545_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_555555_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_555555_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_777620_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_777620_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_777777_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_777777_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_888888_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_888888_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_cc0000_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_cc0000_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_cd0a0a_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_cd0a0a_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\images\ui-icons_ffffff_256x240.png">
+      <Link>Content\themes\base\images\ui-icons_ffffff_256x240.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\jquery-ui.css">
+      <Link>Content\themes\base\jquery-ui.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\jquery-ui.min.css">
+      <Link>Content\themes\base\jquery-ui.min.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\menu.css">
+      <Link>Content\themes\base\menu.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\progressbar.css">
+      <Link>Content\themes\base\progressbar.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\resizable.css">
+      <Link>Content\themes\base\resizable.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\selectable.css">
+      <Link>Content\themes\base\selectable.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\selectmenu.css">
+      <Link>Content\themes\base\selectmenu.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\slider.css">
+      <Link>Content\themes\base\slider.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\sortable.css">
+      <Link>Content\themes\base\sortable.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\spinner.css">
+      <Link>Content\themes\base\spinner.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\tabs.css">
+      <Link>Content\themes\base\tabs.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\theme.css">
+      <Link>Content\themes\base\theme.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\themes\base\tooltip.css">
+      <Link>Content\themes\base\tooltip.css</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Images\Redesign2015\crest-footer.png">
+      <Link>Images\Redesign2015\crest-footer.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Images\Redesign2015\crest-nav.png">
+      <Link>Images\Redesign2015\crest-nav.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Images\Redesign2015\custom-select.png">
+      <Link>Images\Redesign2015\custom-select.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Images\Redesign2015\logo.png">
+      <Link>Images\Redesign2015\logo.png</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Scripts\Custom\feedback.js">
+      <Link>Scripts\Custom\feedback.js</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Scripts\Libraries\jquery-2.1.3.min.js">
+      <Link>Scripts\Libraries\jquery-2.1.3.min.js</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Scripts\Libraries\jquery.ui-1.11.4.min.js">
+      <Link>Scripts\Libraries\jquery.ui-1.11.4.min.js</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Scripts\Libraries\jquery.unobtrusive-ajax.min.js">
+      <Link>Scripts\Libraries\jquery.unobtrusive-ajax.min.js</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Scripts\Libraries\jquery.validate-1.13.1.min.js">
+      <Link>Scripts\Libraries\jquery.validate-1.13.1.min.js</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Scripts\Libraries\jquery.validate.unobtrusive-5.2.3.min.js">
+      <Link>Scripts\Libraries\jquery.validate.unobtrusive-5.2.3.min.js</Link>
+    </Content>
+    <Content Include="Areas\Internal\Views\web.config" />
+    <Content Include="Areas\Internal\Views\Files\Delete.cshtml" />
+    <Content Include="Areas\Internal\Views\Files\Index.cshtml" />
+    <Content Include="Areas\Internal\Views\Files\Replace.cshtml" />
+    <Content Include="Areas\Internal\Views\Files\Upload.cshtml" />
+    <Content Include="Areas\Internal\Views\Event\Index.cshtml" />
+    <Content Include="Areas\Internal\Views\Event\Preview.cshtml" />
+    <Content Include="Areas\Internal\Views\Event\Upload.cshtml" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf">
+      <Link>Content\Redesign2015\Fonts\2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\2fa30669-9bbd-4ced-912f-db94a367ed6c.woff">
+      <Link>Content\Redesign2015\Fonts\2fa30669-9bbd-4ced-912f-db94a367ed6c.woff</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf">
+      <Link>Content\Redesign2015\Fonts\4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf">
+      <Link>Content\Redesign2015\Fonts\6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\70ae52ec-d89b-4c6a-9402-854ebe423c54.woff">
+      <Link>Content\Redesign2015\Fonts\70ae52ec-d89b-4c6a-9402-854ebe423c54.woff</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot">
+      <Link>Content\Redesign2015\Fonts\7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot">
+      <Link>Content\Redesign2015\Fonts\87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\93cc6d34-798e-42c8-87d2-fd6391801b63.eot">
+      <Link>Content\Redesign2015\Fonts\93cc6d34-798e-42c8-87d2-fd6391801b63.eot</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\c12b3ebb-3771-483f-a84a-ac63d615c28e.ttf">
+      <Link>Content\Redesign2015\Fonts\c12b3ebb-3771-483f-a84a-ac63d615c28e.ttf</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff">
+      <Link>Content\Redesign2015\Fonts\d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff">
+      <Link>Content\Redesign2015\Fonts\e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\fbc6b03a-b3a1-427c-a884-053deca3a53c.eot">
+      <Link>Content\Redesign2015\Fonts\fbc6b03a-b3a1-427c-a884-053deca3a53c.eot</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\icomoon.eot">
+      <Link>Content\Redesign2015\Fonts\icomoon.eot</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\icomoon.ttf">
+      <Link>Content\Redesign2015\Fonts\icomoon.ttf</Link>
+    </Content>
+    <Content Include="..\AudioVisualModule\Content\Redesign2015\Fonts\icomoon.woff">
+      <Link>Content\Redesign2015\Fonts\icomoon.woff</Link>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.12.4-vsdoc.js" />
+    <Content Include="Scripts\Custom\custom.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Shared\_Feedback.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_SideNavigation.cshtml" />
+    <Content Include="Views\Event\Create.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Files\Index.cshtml" />
+    <Content Include="Views\Event\Delete.cshtml" />
+    <Content Include="Views\Event\Edit.cshtml" />
+    <Content Include="Views\Event\Preview.cshtml" />
+    <Content Include="Views\Files\Upload.cshtml" />
+    <Content Include="Views\Files\Replace.cshtml" />
+    <Content Include="Views\Files\Delete.cshtml" />
+    <Content Include="Views\Event\Upload.cshtml" />
+    <Content Include="Views\Files\Download.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Internal\Models\" />
+    <Folder Include="Areas\Internal\Views\Shared\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AudioVisualModule\AudioVisualModule.csproj">
+      <Project>{95170f65-dcfa-40ba-b5c1-a013ae1564bf}</Project>
+      <Name>AudioVisualModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56822</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56822/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

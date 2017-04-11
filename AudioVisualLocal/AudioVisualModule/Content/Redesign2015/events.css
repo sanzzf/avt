@@ -1,0 +1,164 @@
+﻿.talks article h2 {
+    font-weight: 600;
+    font-size: 2.8em;
+}
+.sessionWrap {
+    background: #e0dcdb;
+    position:relative;
+    float: left;
+}
+.talkContent {
+    background: #f3f1f1;
+    padding: 22px;
+}
+.timeBlock {
+    border-top: solid 1px #e0dcdb;
+    padding-top: 22px;
+}
+.timeBlock:first-child {
+    border: none;
+}
+.timeBlock > h3 {
+    font: 2.2em/1.2 'Proxima Nova Light', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    display: inline-block;
+    float: left;
+}
+.timeBlock .colList p {
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+.timeBlock .colList .col {
+    margin-bottom: 0;
+}
+.btn.handle {
+    background: #d6d2c4;
+    box-shadow: inset 0 -4px #bdb9ad;
+    color: #333132;
+}
+.btn.handle:hover {
+    background: #bdb9ad;
+}
+.btn.handle .hide {
+    display: none;
+}
+.btn.handle.open .hide {
+    display: inline;
+}
+.btn.handle.open .show {
+    display: none;
+}
+.sessionWrap > h3 {
+    font: 2.2em/1.2 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    float: left;
+    padding: 18px 0 0 22px;
+}
+.sessionWrap h3 small {
+    font: 0.8em/1.8 'Proxima Nova Light', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    display: block;
+}
+.sessionWrap .strong {
+    font: 2em/1.2 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    float: left;
+}
+.sessionWrap > .strong {
+    padding: 22px 130px 0 14px;
+}
+.talkHandle {
+    background: #ba0c2f;
+    color: #fff;
+    position: absolute;
+    padding: 16px;
+    width: 120px;
+    height: 119px;
+    right: 0;
+    top: -22px;
+    font-size: 2.2em;
+    text-decoration: none;
+    line-height: 1;
+}
+.talkHandle em {
+    font-size: 1.72em;
+    display: block;
+    font-weight: 600;
+}
+.talkHandle span {
+    font-size: 0.72em;
+    font-family: 'Proxima Nova Light', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 6px 0 2px;
+    border-bottom: solid 1px #e3b2b8;
+}
+.talkHandle:hover span {
+    border-bottom: none;
+    padding-bottom: 3px;
+}
+.talkHandle .hide {
+    display: none;
+}
+.talkHandle.open .hide {
+    display: inline-block;
+}
+.talkHandle.open .show {
+    display: none;
+}
+.locationDetails .inlineList li {
+    font-size: 1.6em;
+    padding 0 0 0 15px;
+}
+.clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.stick {
+	position: fixed;
+	top: 22px;
+}
+.panel {
+    padding: 25px;
+    background-color: #333132; 
+}
+.panel h4,
+.panel p {
+    color: #fff;
+}
+.panel *:last-child {
+    margin: 0px;
+}
+.registerEvent p.eventPrice {
+    font-size: 3em;
+    margin: 0px;
+}
+.col.fellowCard {
+    margin: 0px;
+}
+.eventDates .eventDateBox {
+    background-color: #e0dcdb;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0px 15px 0px 0px;
+    padding: 5px;
+}
+.eventDates .eventDate .eventTime {
+    margin: 22px 0px 0px 0px;
+}
+.eventDates .eventDate h3 {
+    font-weight: 900;
+    font-size: 1.8em;
+    margin: 0px;
+    height: 100%;
+    line-height: 1.6em;
+}
+.eventDates .eventDate span {
+    font-size: 1.72em;
+}

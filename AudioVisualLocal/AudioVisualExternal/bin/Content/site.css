@@ -1,0 +1,97 @@
+﻿#successMessage {
+    font-size: 25px;
+    font-family: 'Proxima Nova Light', Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0 -25px 25px -25px;
+    padding: 25px;
+    background: #519548 !important;
+}
+
+#Message {
+    font-size: 25px;
+    font-family: 'Proxima Nova Light', Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0 -25px 25px -25px;
+    padding: 25px;
+}
+
+.success {
+    background: #519548 !important;
+}
+
+.failed {
+    background: #ba0c2f !important;
+}
+
+.textboxgrey {
+    background: #dcdbdb;
+    border-radius: 5px;
+    margin: 0 25px 22px 0;
+    padding: 1px 15px;
+    height: 44px;
+    font-size: 1.2em;
+    line-height: 22px;
+    -webkit-appearance: none;
+    width: 50%;
+    display: block;
+    
+}
+
+.imagesetting {
+    float:right;
+    width:40%;
+}
+
+.halfLeft {
+    float:left;
+    width:50%;
+}
+
+.halfRight 
+{
+    float:right;
+    width:40%;
+    text-align:left;
+    
+
+}
+
+.alignLogOff {
+    text-align:right;
+    color:aqua;
+}
+
+.validationText {
+    color:#DDD;
+    background-color:#ba0c2f;
+    border:0;
+    box-sizing:border-box;
+    font-size:1.2em;
+    
+}
+
+.mytext {
+    font-size:1.6em;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* css-3 */    
+    
+}
+.mytextplum {
+    color: #6f263d;
+    font-size:1.6em;
+    width: 60%;
+}
+
+.hideheader {
+    display:none;
+}
+
+.borderline {
+    border: 1px solid #d6d2c4;
+    padding:1em;
+    border-radius:5px;
+}
